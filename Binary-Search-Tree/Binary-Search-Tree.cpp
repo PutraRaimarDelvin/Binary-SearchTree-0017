@@ -101,3 +101,7 @@ public:
 		}
 	}
 };
+int main()
+{
+
+}
