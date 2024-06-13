@@ -23,7 +23,7 @@ class BinaryTree
 public:
 	Node* ROOT;
 
-	Binary Tree()
+	BinaryTree()
 	{
 		ROOT = NULL; // Intializing ROOT to null
 	}
@@ -35,7 +35,7 @@ public:
 		newNode->rightchild = NULL; // Make the right child of the new node point to NULL
 
 		Node* parent = NULL;
-		Node* CurrentNode = NULL;
+		Node* currentNode = NULL;
 		search(element, parent, currentNode);// locate the node which will be the parent of the node to be inserted
 
 		if (parent == NULL) // if the parent is NULL ( tree is empety )
@@ -55,6 +55,23 @@ public:
 			parent->rightchild = newNode;//Make the right child of the parent point to the new node
 		}
 	}
+
+	void search(string element, Node*& parent, Node*& currentNode)
+	{
+		//This function searches the currentNode of the specified Node as well as the current Node of its parent
+		currentNode = ROOT;
+		parent = NULL;
+		while ((currentNode != NULL) && (currentNode->info != element))
+		{
+			parent = currentNode;
+			if (element < currentNode->info)
+				currentNode = currentNode->leftchild;
+			else
+				currentNode = currentNode->rightchild;
+		}
+	}
+
+	
 
 	
 
