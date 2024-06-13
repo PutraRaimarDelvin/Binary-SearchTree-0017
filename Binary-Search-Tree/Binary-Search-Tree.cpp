@@ -133,9 +133,9 @@ int main()
 		cin >> ch;
 		cout << endl;
 
-		switch (ch) 
+		switch (ch)
 		{
-		case '1': 
+		case '1':
 		{
 			cout << "Enter a word: ";
 			string word;
@@ -163,10 +163,8 @@ int main()
 		default:
 		{
 			cout << "Invalid choice!" << endl;
+			break;
+		}
 		}
 	} 
-
-	
-
-	}
 }
